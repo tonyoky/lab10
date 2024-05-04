@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/> 
+<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+
+<body>
+<div id="map" style="height: 600px"></div>
+
+<script>
+var map = L.map('map').setView([13.7563, 100.5018], 10);
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+var greenIcon = L.icon({
+iconUrl: 'dog2.png',
+iconSize: [30, 30],
+iconAnchor: [45, 45],
+popupAnchor: [0, -39]
+});
+
+L.marker([13.75018, 100.49188],{icon:greenIcon}).addTo(map).bindPopup("<b>พระบรมมหาราชวัง</b><br>เขตพระนคร กรุงเทพมหานคร<br>");
+L.marker([13.73545,100.53242],{icon:greenIcon}).addTo(map).bindPopup("<b>ภาควิชาวิศวกรรมสำรวจ จุฬาลงกรณ์มหาวิทยาลัย</b><br>เขตปทุมวัน กรุงเทพมหานคร<br>");
+L.marker([13.70424,100.50285],{icon:greenIcon}).addTo(map).bindPopup("<b>เอเชียทีค เดอะ ริเวอร์ฟรอนท์</b><br>เขตบางคอแหลม กรุงเทพมหานคร<br>");
+L.marker([13.7795,100.5301],{icon:greenIcon}).addTo(map).bindPopup("<b>สถานีรถไฟสามเสน</b><br>เขตพญาไท กรุงเทพมหานคร<br>");
+L.marker([13.74391,100.48851],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดอรุณราชวรารามราชวรมหาวิหาร</b><br>เขตบางกอกใหญ่ กรุงเทพมหานคร<br>");
+L.marker([13.70244,100.46450],{icon:greenIcon}).addTo(map).bindPopup("<b>วัดราชโอรสารามราชวรวิหาร (จอมทอง)</b><br>เขตจอมทอง กรุงเทพมหานคร<br>");
+L.marker([13.72014,100.58307],{icon:greenIcon}).addTo(map).bindPopup("<b>ศูนย์วิทยาศาสตร์เพื่อการศึกษา (ท้องฟ้าจำลองกรุงเทพ)</b><br>เขตคลองเตย กรุงเทพมหานคร<br>");
+
+</script>
+
+</body>
+
+</html>
